@@ -591,6 +591,7 @@
       document.getElementById('prev-day').disabled = index === 0;
       document.getElementById('next-day').disabled = index === days.length - 1;
       document.getElementById('day-counter').textContent = '第 ' + (index + 1) + ' 天／共 ' + days.length + ' 天';
+      requestAnimationFrame(updateCurrentNav);
       if (options.focus) tabs[index].focus();
       if (options.reveal) {const strip = document.getElementById('date-tabs');strip.scrollTo({left:tabs[index].offsetLeft - strip.offsetLeft - (strip.clientWidth - tabs[index].clientWidth) / 2,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});}
     }
@@ -639,11 +640,23 @@
       input.addEventListener('change', () => {savedChecks[input.dataset.check] = input.checked;try {localStorage.setItem(storageKey, JSON.stringify(savedChecks));} catch {storageUnavailable();}updateProgress();});
     });
     updateProgress();
-    if ('IntersectionObserver' in window) {
-      const navLinks = [...document.querySelectorAll('.nav a')];
-      const observer = new IntersectionObserver(entries => {entries.filter(entry => entry.isIntersecting).forEach(entry => {navLinks.forEach(link => {if (link.hash === '#' + entry.target.id) link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});});},{rootMargin:'-18% 0px -65% 0px',threshold:0});
-      document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
+    const navLinks = [...document.querySelectorAll('.nav a')];
+    const navSections = [...document.querySelectorAll('section[id]')];
+    let navFramePending = false;
+    function updateCurrentNav() {
+      const marker = document.querySelector('.site-header').getBoundingClientRect().bottom + 30;
+      const active = navSections.find(section => {const box = section.getBoundingClientRect();return box.top <= marker && box.bottom > marker;});
+      navLinks.forEach(link => {if (active && link.hash === '#' + active.id) link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
     }
+    function scheduleNavUpdate() {
+      if (navFramePending) return;
+      navFramePending = true;
+      requestAnimationFrame(() => {navFramePending = false;updateCurrentNav();});
+    }
+    window.addEventListener('scroll', scheduleNavUpdate, {passive:true});
+    window.addEventListener('resize', scheduleNavUpdate);
+    scheduleNavUpdate();
+
   </script>
 </body>
 </html>
