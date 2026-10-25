@@ -18,6 +18,9 @@
     @media(max-width:360px){.wrap{width:calc(100% - 24px)}.hero h1{font-size:38px}.nav a{padding-inline:6px;font-size:12px}.day-aside{grid-template-columns:1fr}.timeline-item{grid-template-columns:69px minmax(0,1fr);gap:22px}.timeline-item:before{left:78px}.timeline-item:after{left:73px}.brand small{display:none}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.button:hover{transform:none}.day-tab[aria-selected="true"]{transform:none}}
     @media print{body{padding-top:0;color:#000}.site-header,.hero-actions,.day-controls,.footer-links,.toast,.dates{display:none!important}.wrap{width:100%}.hero{grid-template-columns:1fr 1fr}.section{padding-block:20px}.day-layout{grid-template-columns:1fr}.day-aside{display:grid;grid-template-columns:1fr 1fr}.booking-grid,.check-grid{grid-template-columns:repeat(3,1fr)}.guide-body{overflow:visible}.table-wrap{overflow:visible}.hotel-card,.flight,.check-group,.booking-card{break-inside:avoid}.countdown{display:none}.print-note{display:block!important}}
+
+    .day-art{margin:auto 0 0;padding:16px 0 7px;align-self:flex-end;width:100%;max-width:275px;pointer-events:none}.day-art>svg{width:100%;height:auto;aspect-ratio:260/240}.day-art figcaption{margin-top:5px;text-align:center;font-size:14px;line-height:1.6;color:var(--muted)}
+    @media(max-width:680px){.day-art{grid-column:1/-1;justify-self:end;width:min(75%,260px);margin:0;padding-top:0}.day-art figcaption{font-size:13px}}
   </style>
 </head>
 <body>
@@ -34,6 +37,167 @@
     <symbol id="i-house" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7M5 9v12h14V9M9 21v-7h6v7M9 9h6"/></symbol>
     <symbol id="i-spring" viewBox="0 0 24 24"><path d="M4 14c-4 7 20 7 16 0M8 12c-5-5 4-5 0-10m4 10c-5-5 4-5 0-10m4 10c-5-5 4-5 0-10"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+  </defs></svg>
+
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden"><defs>
+    <symbol id="day-scene-sapporo-arrival" viewBox="0 0 260 240"><g fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M32 170Q20 111 61 72Q101 33 159 53Q216 69 226 126Q239 185 191 207Q90 228 32 170Z" fill="#EDF6FA" stroke="none"/>
+  <ellipse cx="131" cy="211" rx="108" ry="13" fill="#EFF6E8" stroke="none"/>
+  <path d="M36 195V143H75V195M43 143V131H67V143" fill="#B9DAA5"/>
+  <path d="M44 154H50M60 154H66M44 166H50M60 166H66M44 178H50M60 178H66"/>
+  <path d="M80 205H161M91 204L119 99L148 204M103 161H137M98 180H142M110 140H130M105 161L137 180M98 180L148 204M137 161L105 180M142 180L91 204" fill="none"/>
+  <path d="M120 101V57M114 78H126"/>
+  <rect x="104" y="103" width="32" height="25" rx="4" fill="#F2A497"/>
+  <rect x="110" y="108" width="20" height="13" rx="2" fill="#FFFCF6" stroke-width="2"/>
+  <path d="M114 114H123M119 111V116" stroke-width="1.8"/>
+  <path d="M157 195V155H190V195" fill="#A8D3E6"/>
+  <path d="M164 167H181M164 178H181"/>
+  <g transform="translate(163 29) rotate(18)"><path d="M0 21L23 21L33 2H42L37 21H55Q62 21 62 26Q62 31 55 31H37L42 50H33L23 31H9L3 39H-4L0 26L-4 13H3Z" fill="#FFFCF6"/><path d="M44 25H51" stroke="#A8D3E6"/></g>
+  <rect x="182" y="167" width="39" height="44" rx="7" fill="#F6D27A"/>
+  <path d="M193 165V156H210V165M191 177V198M212 177V198M190 213V217M214 213V217"/>
+  <path d="M44 60V78M35 69H53M38 63L50 75M38 75L50 63M215 116V130M208 123H222" stroke="#A8D3E6" stroke-width="2.5"/>
+  <circle cx="83" cy="48" r="3" fill="#F6D27A" stroke="none"/>
+    </g></symbol>
+    <symbol id="day-scene-otaru-canal" viewBox="0 0 260 240"><g fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M27 174Q7 110 51 67Q99 29 163 52Q225 65 235 139L223 198L52 218Z" fill="#EDF6FA" stroke="none"/>
+  <path d="M74 174L157 157L237 218H25Z" fill="#A8D3E6"/>
+  <path d="M97 194L115 190M134 207L158 203M181 199L196 203M70 211L84 207" stroke="#FFFCF6" stroke-width="3"/>
+  <path d="M28 158L102 147V88H28Z" fill="#E4D8C7"/>
+  <path d="M23 88L49 69H89L108 88Z" fill="#FFFCF6"/>
+  <path d="M104 148L166 138V87H105" fill="#F2A497"/>
+  <path d="M101 87L122 72H153L172 87Z" fill="#FFFCF6"/>
+  <path d="M36 111H47V131H36ZM59 106H70V126H59ZM82 101H93V121H82Z" fill="#A8D3E6" stroke-width="2"/>
+  <path d="M114 102H125V120H114ZM139 98H150V116H139Z" fill="#FFFCF6" stroke-width="2"/>
+  <path d="M22 162L166 139L193 157L74 183L22 179Z" fill="#FFFCF6"/>
+  <path d="M35 164L167 145M50 161V174M73 157V169M96 153V164M119 150V159M142 146V154" stroke-width="2"/>
+  <path d="M138 178Q173 138 223 165L234 179Q182 152 150 189Z" fill="#E4D8C7"/>
+  <path d="M139 169Q177 133 225 158M150 157L155 172M170 148L172 163M192 147L192 161M213 152L208 165" stroke-width="2"/>
+  <path d="M48 202V133M41 202H55"/>
+  <path d="M37 109H59L56 132H40Z" fill="#F6D27A"/>
+  <path d="M35 109L48 98L61 109M48 94V98M48 113V128"/>
+  <path d="M190 61V77M182 69H198M184 63L196 75M184 75L196 63" stroke="#A8D3E6" stroke-width="2.5"/>
+  <circle cx="78" cy="49" r="3" fill="#F6D27A" stroke="none"/>
+    </g></symbol>
+    <symbol id="day-scene-noboribetsu-onsen" viewBox="0 0 260 240"><g fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M31 175Q9 113 51 71Q95 31 161 50Q218 65 233 119Q248 173 206 205L64 214Z" fill="#FFF0EB" stroke="none"/>
+  <path d="M20 151L50 108L75 128L108 81L139 113L164 94L203 121L234 111L244 163Z" fill="#E4D8C7"/>
+  <path d="M39 126L50 108L62 118M95 99L108 81L122 99M153 106L164 94L177 104M219 119L234 111L239 135" fill="#FFFCF6"/>
+  <path d="M75 127L60 147M139 113L131 143M203 121L191 146" stroke="#BCAFA1"/>
+  <path d="M99 118C77 97 111 89 96 66M147 103C128 82 159 77 145 52M184 122C167 101 197 94 183 74" fill="none" stroke="#FFFCF6" stroke-width="8"/>
+  <path d="M37 175V203C37 224 226 224 226 203V175" fill="#F6D27A"/>
+  <ellipse cx="131.5" cy="175" rx="94.5" ry="26" fill="#E4D8C7"/>
+  <ellipse cx="131.5" cy="175" rx="80" ry="17" fill="#A8D3E6"/>
+  <path d="M52 194V210M76 199V215M102 202V217M131 203V218M160 202V217M188 199V215M212 194V210" stroke-width="2"/>
+  <path d="M92 177C75 161 101 153 90 137M125 178C109 159 137 151 124 133M159 176C145 160 171 151 159 137" fill="none" stroke="#FFFCF6" stroke-width="5"/>
+  <path d="M181 167L207 169L201 187L176 181Z" fill="#FFFCF6"/>
+  <path d="M182 176L201 180" stroke="#F2A497" stroke-width="4"/>
+  <path d="M39 63V77M32 70H46M213 44V58M206 51H220" stroke="#A8D3E6" stroke-width="2.5"/>
+    </g></symbol>
+    <symbol id="day-scene-lake-toya" viewBox="0 0 260 240"><g fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M24 170Q6 111 55 67Q99 33 166 51Q230 69 235 132Q243 182 204 209L56 216Z" fill="#EDF6FA" stroke="none"/>
+  <circle cx="189" cy="70" r="19" fill="#F6D27A" stroke="none"/>
+  <path d="M23 137L64 112L86 120L128 71L170 118L197 108L237 137Z" fill="#B9DAA5"/>
+  <path d="M103 101L128 71L150 99L137 96L130 107L120 96Z" fill="#FFFCF6" stroke-width="2"/>
+  <path d="M20 142Q128 131 239 143L234 195Q133 219 26 196Z" fill="#A8D3E6" stroke="none"/>
+  <path d="M25 142Q128 131 237 142" fill="none"/>
+  <path d="M85 150Q103 131 120 141Q131 125 144 141Q165 133 184 153Z" fill="#B9DAA5"/>
+  <path d="M103 141L107 130L111 140M139 139L143 127L148 141M159 145L162 135L167 145" fill="#EFF6E8" stroke-width="2"/>
+  <path d="M49 161H72M112 171H146M185 165H211M72 183H99M159 189H191" stroke="#FFFCF6" stroke-width="2.5"/>
+  <path d="M19 198Q92 180 148 199Q197 217 241 193L241 223H19Z" fill="#FFFCF6"/>
+  <path d="M39 210V196H103V210M34 191H108V197H34ZM39 181H103V191H39ZM44 212V221M98 212V221" fill="#E4D8C7"/>
+  <path d="M217 209V170M201 189L217 166L233 189ZM202 177L217 155L232 177Z" fill="#B9DAA5"/>
+  <path d="M40 73V87M33 80H47M205 115V125M200 120H210" stroke="#A8D3E6" stroke-width="2.5"/>
+    </g></symbol>
+    <symbol id="day-scene-hakodate-night" viewBox="0 0 260 240"><g fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M28 173Q8 113 52 69Q99 29 165 50Q226 69 236 130Q248 179 205 209L56 215Z" fill="#3E5360" stroke="none"/>
+  <path d="M176 61A20 20 0 1 0 199 85A20 20 0 0 1 176 61Z" fill="#F6D27A" stroke="none"/>
+  <path d="M55 86V96M50 91H60M135 61V71M130 66H140M213 117V127M208 122H218M96 113V121M92 117H100" stroke="#FFFCF6" stroke-width="2"/>
+  <path d="M30 168Q72 147 96 172L122 216H26ZM147 178Q186 144 233 170L236 214H135Z" fill="#A8D3E6" stroke="none"/>
+  <path d="M92 212L104 164L128 140L153 164L170 212Z" fill="#F2A497"/>
+  <path d="M108 176L128 154L147 176M103 191L128 170L156 191M98 206L126 189L163 206" fill="none" stroke="#F6D27A" stroke-width="3"/>
+  <g fill="#F6D27A" stroke="none"><circle cx="119" cy="169" r="2.5"/><circle cx="135" cy="173" r="2.5"/><circle cx="112" cy="186" r="2.5"/><circle cx="145" cy="187" r="2.5"/><circle cx="119" cy="203" r="2.5"/><circle cx="147" cy="204" r="2.5"/><circle cx="130" cy="184" r="2.5"/></g>
+  <path d="M33 111L154 88" stroke="#FFFCF6" stroke-width="2.5"/>
+  <path d="M74 104V115M68 115H83" stroke="#FFFCF6"/>
+  <rect x="60" y="117" width="31" height="26" rx="6" fill="#F2A497"/>
+  <path d="M65 122H86V132H65Z" fill="#FFFCF6" stroke-width="2"/>
+  <path d="M75 122V132M63 137H88" stroke-width="2"/>
+  <path d="M20 218L56 178L83 199L110 221M180 221L207 185L239 215" fill="#B9DAA5"/>
+    </g></symbol>
+    <symbol id="day-scene-hokuto-train" viewBox="0 0 260 240"><g fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M24 173Q6 112 53 70Q99 32 164 50Q226 68 236 128Q246 181 205 207L57 216Z" fill="#EDF6FA" stroke="none"/>
+  <path d="M24 146L54 119L80 134L123 88L169 130L195 111L238 146" fill="#B9DAA5"/>
+  <path d="M101 113L123 88L145 111L131 108L124 117L116 107Z" fill="#FFFCF6"/>
+  <path d="M23 149Q124 133 237 149L237 173H23Z" fill="#A8D3E6" stroke="none"/>
+  <path d="M23 176Q118 157 239 175L240 216H22Z" fill="#FFFCF6"/>
+  <path d="M33 199L230 188M30 213L235 203M52 199L50 211M80 197L79 210M109 195L109 208M140 193L141 206M172 192L174 204M206 190L209 202" stroke-width="2"/>
+  <path d="M50 177V138Q50 128 61 128H176Q194 128 203 145L218 172Q221 186 207 190H63Q50 190 50 177Z" fill="#A8D3E6"/>
+  <path d="M53 167H214L220 179H51Z" fill="#3E5360"/>
+  <path d="M63 136H85V156H63ZM98 136H120V156H98ZM133 136H155V156H133Z" fill="#FFFCF6" stroke-width="2"/>
+  <path d="M173 137H183Q190 138 195 148L200 158H173Z" fill="#3E5360" stroke-width="2"/>
+  <path d="M60 121H177" stroke="#3E5360" stroke-width="4"/>
+  <path d="M183 174H190M203 173H208" stroke="#F6D27A" stroke-width="4"/>
+  <circle cx="77" cy="190" r="6" fill="#3E5360"/><circle cx="181" cy="190" r="6" fill="#3E5360"/>
+  <path d="M36 183V132M20 157L36 133L52 157ZM23 143L36 121L49 143Z" fill="#B9DAA5"/>
+  <path d="M177 61V77M169 69H185M171 63L183 75M171 75L183 63M68 69V79M63 74H73" stroke="#A8D3E6" stroke-width="2.5"/>
+    </g></symbol>
+    <symbol id="day-scene-asahiyama-snow" viewBox="0 0 260 240"><g fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M26 172Q9 110 52 69Q98 32 165 49Q228 67 235 129Q247 179 204 210L57 216Z" fill="#EDF6FA" stroke="none"/>
+  <path d="M146 105L161 88L177 100L194 80L216 98L234 92L239 181H142Z" fill="#E4D8C7"/>
+  <path d="M170 104H209L211 174H166Z" fill="#A8D3E6"/>
+  <path d="M180 110L177 166M191 111L189 172M201 109L203 166" stroke="#FFFCF6" stroke-width="3"/>
+  <path d="M144 181Q188 161 238 180L237 211H147Z" fill="#A8D3E6" stroke="none"/>
+  <path d="M18 206Q54 180 109 202Q165 221 239 200L241 225H18Z" fill="#FFFCF6"/>
+  <path d="M54 169V102M32 143L54 111L76 143ZM36 124L54 96L72 124ZM40 107L54 84L68 107Z" fill="#B9DAA5"/>
+  <path d="M39 117L54 111L69 117M44 96L54 91L63 96" stroke="#FFFCF6" stroke-width="4"/>
+  <path d="M87 196L97 184L102 198L91 204ZM115 198L123 185L130 199L119 206Z" fill="#F6D27A"/>
+  <path d="M79 171Q77 145 94 140Q114 132 125 148Q132 159 130 183Q126 204 105 204Q83 202 79 181L65 187L70 169L81 157" fill="#3E5360"/>
+  <ellipse cx="105" cy="178" rx="18" ry="24" fill="#FFFCF6" stroke="none"/>
+  <path d="M91 154L100 151L111 156L101 161Z" fill="#F6D27A" stroke-width="2"/>
+  <circle cx="98" cy="146" r="2.5" fill="#FFFCF6" stroke="none"/>
+  <path d="M155 207L162 198L168 208M180 207L183 198L190 207" fill="#F6D27A"/>
+  <path d="M150 184Q149 163 166 160Q184 157 190 176L196 190L188 188Q188 209 171 210Q153 209 151 193L142 198L145 181" fill="#3E5360"/>
+  <ellipse cx="172" cy="190" rx="12" ry="18" fill="#FFFCF6" stroke="none"/>
+  <path d="M157 172L167 169L173 174L166 178Z" fill="#F6D27A" stroke-width="2"/>
+  <circle cx="165" cy="166" r="2" fill="#FFFCF6" stroke="none"/>
+  <path d="M102 64V80M94 72H110M96 66L108 78M96 78L108 66M222 49V61M216 55H228" stroke="#A8D3E6" stroke-width="2.5"/>
+    </g></symbol>
+    <symbol id="day-scene-sapporo-shrine" viewBox="0 0 260 240"><g fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M27 172Q9 110 52 68Q100 32 165 50Q227 69 235 129Q246 180 203 209L56 215Z" fill="#EFF6E8" stroke="none"/>
+  <path d="M20 208Q87 187 147 205Q202 221 241 202L241 222H20Z" fill="#FFFCF6"/>
+  <path d="M44 199V135M26 166L44 134L62 166ZM30 147L44 122L58 147Z" fill="#B9DAA5"/>
+  <path d="M184 186V114M164 148L184 114L204 148ZM169 127L184 100L199 127Z" fill="#B9DAA5"/>
+  <path d="M67 199L72 88H86L83 199ZM144 199L139 88H153L158 199Z" fill="#E4D8C7"/>
+  <path d="M56 81Q109 92 167 81L164 95Q109 103 60 95Z" fill="#E4D8C7"/>
+  <path d="M54 79Q109 87 170 79L168 84Q109 93 56 84Z" fill="#FFFCF6"/>
+  <path d="M63 113H162V124H63Z" fill="#E4D8C7"/>
+  <rect x="103" y="97" width="18" height="32" rx="2" fill="#B9DAA5"/>
+  <path d="M93 135Q109 150 132 135M101 143L98 151L104 158M119 144L116 153L123 160" fill="none" stroke-width="2"/>
+  <path d="M89 200L98 168H127L138 201Z" fill="#E4D8C7" stroke="none"/>
+  <rect x="167" y="170" width="54" height="44" rx="3" fill="#F2A497"/>
+  <path d="M181 174V164Q181 153 194 153Q207 153 207 164V174" fill="none"/>
+  <path d="M188 187L194 181L200 187L194 194Z" fill="#FFFCF6" stroke-width="2"/>
+  <path d="M133 207L156 198L169 215L143 221Z" fill="#F6D27A"/>
+  <path d="M141 209L153 205M148 215L160 210" stroke="#FFFCF6" stroke-width="3"/>
+  <path d="M42 68V82M35 75H49M205 72V86M198 79H212" stroke="#A8D3E6" stroke-width="2.5"/>
+    </g></symbol>
+    <symbol id="day-scene-homebound-flight" viewBox="0 0 260 240"><g fill="none" stroke="#3E3A39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M27 173Q8 111 53 69Q99 31 164 50Q226 68 235 129Q246 180 204 210L57 215Z" fill="#EDF6FA" stroke="none"/>
+  <path d="M28 111Q16 96 29 88Q35 71 52 80Q65 72 75 84Q93 85 90 100Q89 111 74 111Z" fill="#FFFCF6"/>
+  <path d="M169 137Q159 122 175 117Q182 100 198 110Q214 102 222 115Q240 116 237 129Q234 139 221 139Z" fill="#FFFCF6"/>
+  <path d="M45 139Q70 116 104 116" fill="none" stroke="#A8D3E6" stroke-dasharray="5 8" stroke-width="2.5"/>
+  <g transform="translate(109 44) rotate(-16)"><path d="M0 27H30L47 1H59L52 27H78Q91 27 91 34Q91 41 78 41H52L59 67H47L30 41H13L4 52H-6L0 34L-6 16H4Z" fill="#FFFCF6"/><path d="M67 31H79M37 34H51" stroke="#A8D3E6" stroke-width="3"/></g>
+  <ellipse cx="127" cy="219" rx="96" ry="10" fill="#EFF6E8" stroke="none"/>
+  <path d="M94 155V139Q94 132 102 132H122Q130 132 130 139V155" fill="none"/>
+  <rect x="77" y="154" width="71" height="58" rx="10" fill="#F2A497"/>
+  <path d="M91 168V198M133 168V198M87 213V219M137 213V219"/>
+  <path d="M133 148L159 161L147 188L125 178Z" fill="#FFFCF6"/>
+  <circle cx="135" cy="157" r="2" fill="#3E3A39" stroke="none"/>
+  <path d="M139 165V178M133 168L145 175M133 175L145 168" stroke="#A8D3E6" stroke-width="2"/>
+  <path d="M169 195Q170 180 183 176Q193 174 202 185L211 201L202 216H169Z" fill="#F6D27A"/>
+  <path d="M180 179L189 194L199 181M177 198L184 203M195 198L199 202M189 208H192" fill="none" stroke-width="2"/>
+  <path d="M46 175V189M39 182H53M218 68V84M210 76H226M212 70L224 82M212 82L224 70" stroke="#A8D3E6" stroke-width="2.5"/>
+    </g></symbol>
   </defs></svg>
 
   <header class="site-header">
@@ -88,7 +252,7 @@
       <section class="section" id="itinerary" aria-labelledby="itinerary-title">
         <div class="section-heading"><div><h2 id="itinerary-title" class="chapter"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>一天一頁，慢慢旅行</h2><p>選一個日期，看看今天的風景。標示「必去」的是行程重點，仍依天候與營運調整。</p></div><span class="pill green">9 天 8 夜</span></div>
         <div class="dates" role="tablist" aria-label="選擇旅行日期" id="date-tabs"><button type="button" role="tab" id="tab-0" aria-controls="day-panel" aria-selected="true" tabindex="0" class="day-tab"><span class="day-n">第 1 天</span><strong>12/5</strong><small>星期六</small></button><button type="button" role="tab" id="tab-1" aria-controls="day-panel" aria-selected="false" tabindex="-1" class="day-tab"><span class="day-n">第 2 天</span><strong>12/6</strong><small>星期日</small></button><button type="button" role="tab" id="tab-2" aria-controls="day-panel" aria-selected="false" tabindex="-1" class="day-tab"><span class="day-n">第 3 天</span><strong>12/7</strong><small>星期一</small></button><button type="button" role="tab" id="tab-3" aria-controls="day-panel" aria-selected="false" tabindex="-1" class="day-tab"><span class="day-n">第 4 天</span><strong>12/8</strong><small>星期二</small></button><button type="button" role="tab" id="tab-4" aria-controls="day-panel" aria-selected="false" tabindex="-1" class="day-tab"><span class="day-n">第 5 天</span><strong>12/9</strong><small>星期三</small></button><button type="button" role="tab" id="tab-5" aria-controls="day-panel" aria-selected="false" tabindex="-1" class="day-tab"><span class="day-n">第 6 天</span><strong>12/10</strong><small>星期四</small></button><button type="button" role="tab" id="tab-6" aria-controls="day-panel" aria-selected="false" tabindex="-1" class="day-tab"><span class="day-n">第 7 天</span><strong>12/11</strong><small>星期五</small></button><button type="button" role="tab" id="tab-7" aria-controls="day-panel" aria-selected="false" tabindex="-1" class="day-tab"><span class="day-n">第 8 天</span><strong>12/12</strong><small>星期六</small></button><button type="button" role="tab" id="tab-8" aria-controls="day-panel" aria-selected="false" tabindex="-1" class="day-tab"><span class="day-n">第 9 天</span><strong>12/13</strong><small>星期日</small></button></div>
-        <div id="day-panel" role="tabpanel" aria-labelledby="tab-0" tabindex="0"><div class="day-layout"><article class="day-card"><div class="day-top"><div class="day-top-meta"><span>第 1 天・12/5（六）</span><svg class="icon" aria-hidden="true"><use href="#i-plane"/></svg></div><h3>你好，札幌。</h3><p>抵達雪國的第一天，先安頓好自己，再去吃一頓暖暖的晚餐。</p></div><ol class="timeline"><li class="timeline-item"><div class="time">約06:15（台灣）</div><div><div class="timeline-title"><h4>抵達桃園第一航廈</h4><span class="tag blue">機場</span></div><p>建議留起飛前三小時，實際報到與托運截止以航空公司為準。</p></div></li><li class="timeline-item"><div class="time">09:15（台灣）</div><div><div class="timeline-title"><h4>桃園起飛</h4><span class="tag blue">機場</span></div><p>第一航廈；日本比台灣快一小時。</p></div></li><li class="timeline-item"><div class="time">14:05（日本）</div><div><div class="timeline-title"><h4>抵達新千歲機場</h4><span class="tag blue">機場</span></div><p>新千歲國際線航廈；入境、領行李。</p></div></li><li class="timeline-item"><div class="time">14:05–15:30</div><div><div class="timeline-title"><h4>入境與移動緩衝</h4><span class="tag blue">機場／移動</span></div><p>時間依排隊與行李領取調整。</p></div></li><li class="timeline-item"><div class="time">15:30–16:40</div><div><div class="timeline-title"><h4>JR 快速 Airport → 札幌</h4><span class="tag blue">JR 列車</span></div><p>列車約 40 分鐘級，另留候車與飯店接駁。</p></div></li><li class="timeline-item"><div class="time">16:40–17:30</div><div><div class="timeline-title"><h4>入住、放下行李</h4><span class="tag pink">住宿／行李</span></div><p>VIA INN PRIME 札幌大通；若延誤就順延晚餐。</p></div></li><li class="timeline-item"><div class="time">18:00–20:00</div><div><div class="timeline-title"><h4>晚餐與輕散步</h4><span class="tag pink">餐食／休息</span></div><p>大通、狸小路、薄野擇一，不必全部走完。</p></div></li></ol></article><aside class="day-aside" aria-label="當日提醒"><div class="aside-note"><h4><svg class="icon" aria-hidden="true"><use href="#i-bed"/></svg>今晚的落腳處</h4><p>VIA INN PRIME 札幌大通，第 1 晚。住宿已確認；早餐依訂單。</p><a href="#hotels">查看住宿資訊</a></div><div class="aside-note"><h4><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg>手帖小提醒</h4><p>去程09:15（台灣）桃園第一航廈起飛、14:05（日本）抵達新千歲國際線。通關後再選Airport班次；航空公司與班號待補。入住時確認12/7行李代寄與格拉斯麗代收回覆。</p><a href="https://www.jrhokkaido.co.jp/global/english/ticket/reservation/index.html" target="_blank" rel="noopener noreferrer">Airport 與訂票說明</a></div></aside></div></div>
+        <div id="day-panel" role="tabpanel" aria-labelledby="tab-0" tabindex="0"><div class="day-layout"><article class="day-card"><div class="day-top"><div class="day-top-meta"><span>第 1 天・12/5（六）</span><svg class="icon" aria-hidden="true"><use href="#i-plane"/></svg></div><h3>你好，札幌。</h3><p>抵達雪國的第一天，先安頓好自己，再去吃一頓暖暖的晚餐。</p></div><ol class="timeline"><li class="timeline-item"><div class="time">約06:15（台灣）</div><div><div class="timeline-title"><h4>抵達桃園第一航廈</h4><span class="tag blue">機場</span></div><p>建議留起飛前三小時，實際報到與托運截止以航空公司為準。</p></div></li><li class="timeline-item"><div class="time">09:15（台灣）</div><div><div class="timeline-title"><h4>桃園起飛</h4><span class="tag blue">機場</span></div><p>第一航廈；日本比台灣快一小時。</p></div></li><li class="timeline-item"><div class="time">14:05（日本）</div><div><div class="timeline-title"><h4>抵達新千歲機場</h4><span class="tag blue">機場</span></div><p>新千歲國際線航廈；入境、領行李。</p></div></li><li class="timeline-item"><div class="time">14:05–15:30</div><div><div class="timeline-title"><h4>入境與移動緩衝</h4><span class="tag blue">機場／移動</span></div><p>時間依排隊與行李領取調整。</p></div></li><li class="timeline-item"><div class="time">15:30–16:40</div><div><div class="timeline-title"><h4>JR 快速 Airport → 札幌</h4><span class="tag blue">JR 列車</span></div><p>列車約 40 分鐘級，另留候車與飯店接駁。</p></div></li><li class="timeline-item"><div class="time">16:40–17:30</div><div><div class="timeline-title"><h4>入住、放下行李</h4><span class="tag pink">住宿／行李</span></div><p>VIA INN PRIME 札幌大通；若延誤就順延晚餐。</p></div></li><li class="timeline-item"><div class="time">18:00–20:00</div><div><div class="timeline-title"><h4>晚餐與輕散步</h4><span class="tag pink">餐食／休息</span></div><p>大通、狸小路、薄野擇一，不必全部走完。</p></div></li></ol></article><aside class="day-aside" aria-label="當日提醒"><div class="aside-note"><h4><svg class="icon" aria-hidden="true"><use href="#i-bed"/></svg>今晚的落腳處</h4><p>VIA INN PRIME 札幌大通，第 1 晚。住宿已確認；早餐依訂單。</p><a href="#hotels">查看住宿資訊</a></div><div class="aside-note"><h4><svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg>手帖小提醒</h4><p>去程09:15（台灣）桃園第一航廈起飛、14:05（日本）抵達新千歲國際線。通關後再選Airport班次；航空公司與班號待補。入住時確認12/7行李代寄與格拉斯麗代收回覆。</p><a href="https://www.jrhokkaido.co.jp/global/english/ticket/reservation/index.html" target="_blank" rel="noopener noreferrer">Airport 與訂票說明</a></div><figure class="day-art"><svg viewBox="0 0 260 240" role="img" aria-labelledby="day-art-title-1" focusable="false"><title id="day-art-title-1">飛機掠過雪花，札幌電視塔旁放著黃色旅行箱。</title><use href="#day-scene-sapporo-arrival"/></svg><figcaption>札幌，雪國的第一眼</figcaption></figure></aside></div></div>
         <div class="day-controls"><button type="button" id="prev-day" disabled>上一天</button><span class="muted" id="day-counter" aria-live="polite">第 1 天／共 9 天</span><button type="button" id="next-day">下一天</button></div>
         <p class="print-note" hidden>列印目前顯示日期；其餘日期可回網站切換查看。</p>
       </section>
@@ -235,9 +399,26 @@
     let selectedDay = 0;
     const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const icon = name => '<svg class="icon" aria-hidden="true"><use href="#i-' + name + '"/></svg>';
+    const dailyArt = [
+      {"scene": "sapporo-arrival", "caption": "札幌，雪國的第一眼", "description": "飛機掠過雪花，札幌電視塔旁放著黃色旅行箱。"},
+      {"scene": "otaru-canal", "caption": "小樽，沿著運河散步", "description": "覆雪的運河倉庫、拱橋與煤氣燈，映在藍色水面上。"},
+      {"scene": "noboribetsu-onsen", "caption": "登別，暖暖的一場湯", "description": "地獄谷山稜冒著白色蒸氣，前景是木製溫泉浴池與毛巾。"},
+      {"scene": "lake-toya", "caption": "洞爺湖，留一小段湖光", "description": "冬日洞爺湖上的中島、遠方雪山與湖畔長椅。"},
+      {"scene": "hakodate-night", "caption": "函館，收藏一片夜色", "description": "函館山纜車與港灣兩側的城市燈光，夜空有月亮和星星。"},
+      {"scene": "hokuto-train", "caption": "北斗號，把風景帶回札幌", "description": "藍色特急列車駛過雪地，車窗外是海岸與針葉樹。"},
+      {"scene": "asahiyama-snow", "caption": "旭山與美瑛，雪中的相遇", "description": "兩隻企鵝站在雪地裡，後方是藍色瀑布與覆雪的樹木。"},
+      {"scene": "sapporo-shrine", "caption": "札幌，散步與小小伴手禮", "description": "北海道神宮的鳥居與雪中樹木，旁邊放著甜點與伴手禮紙袋。"},
+      {"scene": "homebound-flight", "caption": "把冬天打包，帶回家", "description": "飛機飛向雲朵，粉色行李箱上繫著一張雪花吊牌。"}
+    ];
+    function renderDayArt(dayNumber) {
+      const art = dailyArt[dayNumber - 1];
+      if (!art) return '';
+      return '<figure class="day-art"><svg viewBox="0 0 260 240" role="img" aria-labelledby="day-art-title-' + dayNumber + '" focusable="false"><title id="day-art-title-' + dayNumber + '">' + escapeHtml(art.description) + '</title><use href="#day-scene-' + art.scene + '"/></svg><figcaption>' + escapeHtml(art.caption) + '</figcaption></figure>';
+    }
+
     function renderDay(day) {
       const rows = day.events.map(event => '<li class="timeline-item"><div class="time">' + escapeHtml(event.time) + '</div><div><div class="timeline-title"><h4>' + escapeHtml(event.title) + '</h4>' + (event.must ? '<span class="tag must">必去</span>' : '') + '<span class="tag ' + escapeHtml(event.color) + '">' + escapeHtml(event.mode) + '</span></div><p>' + escapeHtml(event.note) + '</p></div></li>').join('');
-      return '<div class="day-layout"><article class="day-card"><div class="day-top"><div class="day-top-meta"><span>第 ' + day.n + ' 天・12/' + day.date + '（' + escapeHtml(day.weekday) + '）</span>' + icon(day.scene) + '</div><h3>' + escapeHtml(day.title) + '</h3><p>' + escapeHtml(day.summary) + '</p></div><ol class="timeline">' + rows + '</ol></article><aside class="day-aside" aria-label="當日提醒"><div class="aside-note"><h4>' + icon('bed') + '今晚的落腳處</h4><p>' + escapeHtml(day.hotel) + '</p><a href="#hotels">查看住宿資訊</a></div><div class="aside-note"><h4>' + icon('bag') + '手帖小提醒</h4><p>' + escapeHtml(day.reminder) + '</p><a href="' + escapeHtml(day.link) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(day.linkLabel) + '</a></div></aside></div>';
+      return '<div class="day-layout"><article class="day-card"><div class="day-top"><div class="day-top-meta"><span>第 ' + day.n + ' 天・12/' + day.date + '（' + escapeHtml(day.weekday) + '）</span>' + icon(day.scene) + '</div><h3>' + escapeHtml(day.title) + '</h3><p>' + escapeHtml(day.summary) + '</p></div><ol class="timeline">' + rows + '</ol></article><aside class="day-aside" aria-label="當日提醒"><div class="aside-note"><h4>' + icon('bed') + '今晚的落腳處</h4><p>' + escapeHtml(day.hotel) + '</p><a href="#hotels">查看住宿資訊</a></div><div class="aside-note"><h4>' + icon('bag') + '手帖小提醒</h4><p>' + escapeHtml(day.reminder) + '</p><a href="' + escapeHtml(day.link) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(day.linkLabel) + '</a></div>' + renderDayArt(day.n) + '</aside></div>';
     }
     function selectDay(index, options = {}) {
       if (index < 0 || index >= days.length) return;
