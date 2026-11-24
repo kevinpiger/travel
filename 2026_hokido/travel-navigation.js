@@ -621,9 +621,9 @@
     "kind": "area"
   },
   "spot-46": {
-    "label": "支笏湖",
-    "destination": "支笏湖 其他區域與季節圖補充 北海道 日本",
-    "kind": "area"
+    "label": "支笏湖溫泉／遊客中心周邊",
+    "destination": "42.7727487,141.4041342",
+    "kind": "point"
   },
   "spot-47": {
     "label": "二世谷",
@@ -678,6 +678,11 @@
   "tour-iwamizawa": {
     "label": "岩見澤休息站",
     "reason": "休息站方向與停靠設施待導遊確認"
+  },
+  "shikotsu": {
+    "label": "支笏湖溫泉／遊客中心周邊",
+    "destination": "42.7727487,141.4041342",
+    "kind": "point"
   }
 };
   const aliases = {
@@ -808,9 +813,247 @@
   "洞爺湖湖畔": "spot-25",
   "小樽天狗山｜12/6下午主線": "spot-14",
   "Toraya": "food-toraya",
-  "白金青池／白鬚瀑布": "spot-15"
+  "白金青池／白鬚瀑布": "spot-15",
+  "支笏湖溫泉／遊客中心周邊": "shikotsu"
 };
-  const events = {"5": {"0": ["tpe"], "2": ["ctsi"], "4": ["cts"], "5": ["sapporo"], "6": ["via"], "7": ["tanuki"]}, "6": {"1": ["otaru"], "2": ["spot-10", "kitaichi", "music"], "3": ["food-11", "food-12", "letao"], "4": ["canal"], "5": ["tengu"], "6": ["tengu"], "7": ["otaru"], "8": ["sapporo"]}, "7": {"2": ["mahoroba"], "3": ["spot-24"], "4": ["jigoku"], "5": ["mahoroba"]}, "8": {"1": ["spot-25"], "2": ["spot-25"], "4": ["toya"], "5": ["hakodate"]}, "9": {"0": ["market"], "1": ["goryopark", "goryo"], "3": ["hachimanzaka", "church"], "4": ["ropebase"], "5": ["ropebase"], "6": ["ropebase"], "7": ["ropebase"], "9": ["lagent"]}, "10": {"0": ["lagent"], "1": ["lagent"], "2": ["kanemori", "mashu", "market"], "3": ["lagent"], "4": ["hakodate"], "5": ["sapporo"], "6": ["gracery"], "7": ["shihachi"], "8": ["gracery"]}, "11": {"0": ["rei", "tv"], "1": ["rei", "tv"], "2": ["tour-sunagawa"], "3": ["zoo"], "4": ["falls"], "5": ["pond"], "6": ["tour-furano-rest"], "7": ["ningle"], "8": ["tour-iwamizawa"], "9": ["tv", "rei"], "10": ["gracery"]}, "12": {"0": ["maruyama"], "1": ["jingu"], "2": ["maruyama"], "3": ["toraya"], "4": ["toraya"], "5": ["odori"], "6": ["activity-munich"], "8": ["gracery"]}, "13": {"1": ["gracery"], "2": ["gracery"], "3": ["cts"], "4": ["ctsi"], "6": ["ctsi"], "7": ["tpe"]}};
+  const events = {
+  "5": {
+    "0": [
+      "tpe"
+    ],
+    "2": [
+      "ctsi"
+    ],
+    "4": [
+      "cts"
+    ],
+    "5": [
+      "sapporo"
+    ],
+    "6": [
+      "via"
+    ],
+    "7": [
+      "tanuki"
+    ],
+    "8": [
+      "activity-munich"
+    ],
+    "9": [
+      "activity-munich"
+    ],
+    "10": [
+      "via"
+    ]
+  },
+  "6": {
+    "1": [
+      "otaru"
+    ],
+    "2": [
+      "spot-10",
+      "kitaichi",
+      "music"
+    ],
+    "3": [
+      "food-11",
+      "food-12",
+      "letao"
+    ],
+    "4": [
+      "canal"
+    ],
+    "5": [
+      "tengu"
+    ],
+    "6": [
+      "tengu"
+    ],
+    "7": [
+      "otaru"
+    ],
+    "8": [
+      "sapporo"
+    ]
+  },
+  "7": {
+    "2": [
+      "shikotsu"
+    ],
+    "3": [
+      "shikotsu"
+    ],
+    "4": [
+      "mahoroba"
+    ],
+    "5": [
+      "jigoku"
+    ],
+    "6": [
+      "mahoroba"
+    ]
+  },
+  "8": {
+    "1": [
+      "jigoku"
+    ],
+    "3": [
+      "spot-25"
+    ],
+    "4": [
+      "spot-25"
+    ],
+    "6": [
+      "toya"
+    ],
+    "7": [
+      "hakodate"
+    ]
+  },
+  "9": {
+    "0": [
+      "market"
+    ],
+    "1": [
+      "goryopark",
+      "goryo"
+    ],
+    "3": [
+      "hachimanzaka",
+      "church"
+    ],
+    "4": [
+      "ropebase"
+    ],
+    "5": [
+      "ropebase"
+    ],
+    "6": [
+      "ropebase"
+    ],
+    "7": [
+      "ropebase"
+    ],
+    "9": [
+      "lagent"
+    ]
+  },
+  "10": {
+    "0": [
+      "lagent"
+    ],
+    "1": [
+      "lagent"
+    ],
+    "2": [
+      "kanemori",
+      "mashu",
+      "market"
+    ],
+    "3": [
+      "lagent"
+    ],
+    "4": [
+      "hakodate"
+    ],
+    "5": [
+      "sapporo"
+    ],
+    "6": [
+      "gracery"
+    ],
+    "7": [
+      "shihachi"
+    ],
+    "8": [
+      "gracery"
+    ]
+  },
+  "11": {
+    "0": [
+      "rei",
+      "tv"
+    ],
+    "1": [
+      "rei",
+      "tv"
+    ],
+    "2": [
+      "tour-sunagawa"
+    ],
+    "3": [
+      "zoo"
+    ],
+    "4": [
+      "falls"
+    ],
+    "5": [
+      "pond"
+    ],
+    "6": [
+      "tour-furano-rest"
+    ],
+    "7": [
+      "ningle"
+    ],
+    "8": [
+      "tour-iwamizawa"
+    ],
+    "9": [
+      "tv",
+      "rei"
+    ],
+    "10": [
+      "gracery"
+    ]
+  },
+  "12": {
+    "0": [
+      "maruyama"
+    ],
+    "1": [
+      "jingu"
+    ],
+    "2": [
+      "maruyama"
+    ],
+    "3": [
+      "odori"
+    ],
+    "5": [
+      "activity-munich"
+    ],
+    "6": [
+      "toraya"
+    ],
+    "7": [
+      "toraya"
+    ],
+    "8": [
+      "gracery"
+    ]
+  },
+  "13": {
+    "1": [
+      "gracery"
+    ],
+    "2": [
+      "gracery"
+    ],
+    "3": [
+      "cts"
+    ],
+    "4": [
+      "ctsi"
+    ],
+    "6": [
+      "ctsi"
+    ],
+    "7": [
+      "tpe"
+    ]
+  }
+};
   const sightGroups = {"spot-09": ["canal", "spot-10"], "spot-30": ["goryo", "goryopark"], "spot-33": ["hachimanzaka", "church"], "spot-15": ["pond", "falls"]};
   const plane = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m21 3-7 18-4-7-7-4 18-7Z"/><path d="m10 14 6-6"/></svg>';
   const normalize = text => text.replace(/[\s・｜|／/、，：:]/g,'').toLowerCase();
