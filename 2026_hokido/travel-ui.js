@@ -61,3 +61,18 @@
   applyAccents();
   window.addEventListener('hokkaido-day-change',()=>queueMicrotask(applyAccents));
 })();
+
+/* Home-page detail links open the separate library; stored daily context is retained. */
+(() => {
+  const source=document.getElementById('library-anchor-data');if(!source)return;
+  const ids=new Set(JSON.parse(source.textContent));
+  function updateResourceLinks(){
+    document.querySelectorAll('a[href^="#"]').forEach(link=>{
+      let id;try{id=decodeURIComponent(link.hash.slice(1));}catch{return;}
+      if(!ids.has(id))return;
+      link.href='./resources.html#'+encodeURIComponent(id);link.target='_blank';link.rel='noopener noreferrer';
+    });
+  }
+  updateResourceLinks();
+  window.addEventListener('hokkaido-day-change',()=>queueMicrotask(updateResourceLinks));
+})();
