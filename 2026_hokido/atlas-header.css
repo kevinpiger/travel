@@ -1,8 +1,28 @@
 /* SC-29 derivative scene; attribution and licenses: atlas-header.LICENSE.txt. */
+:root{--atlas-expanded-height:310px;--atlas-compact-height:88px;--atlas-live-height:310px;--atlas-progress:0;--atlas-toolbar-height:150px}
 .daily-reader .travel-mast.atlas-mast{position:relative;display:flex;align-items:center;min-height:310px;padding:32px;margin-top:22px;margin-bottom:14px;border:1px solid #e6d5bd;border-radius:22px;overflow:hidden;background:#fff7eb;isolation:isolate;box-shadow:0 5px 20px #94723f08}
 .daily-reader.atlas-top{padding-top:0}
 .daily-reader.atlas-top .travel-mast.atlas-mast{width:100%;margin:0;border:0;border-radius:0;box-shadow:none;padding-inline:max(32px,calc((100vw - 1120px)/2))}
-.daily-reader.atlas-top .site-header{position:sticky;top:0;left:auto;width:100%;z-index:50}
+.atlas-shell{height:var(--atlas-expanded-height);overflow-anchor:none}
+.daily-reader.atlas-top .site-header.atlas-header{position:fixed;top:0;left:0;width:100%;height:var(--atlas-live-height);z-index:60;overflow:hidden;border-bottom:1px solid #e3d2b7}
+.daily-reader.atlas-top .atlas-header .atlas-mast{height:100%;min-height:0;padding-block:0}
+.atlas-header .atlas-copy{opacity:clamp(0,calc(1 - var(--atlas-progress) * 2),1);pointer-events:none}
+.atlas-header .atlas-stage{top:calc(var(--atlas-progress) * -25px);bottom:auto;height:var(--atlas-expanded-height)}
+.atlas-actions{position:absolute;right:max(24px,calc((100vw - 1120px)/2));top:16px;z-index:5}
+.daily-reader.atlas-top .atlas-header .atlas-actions a{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;min-height:44px;padding:0;border:1px solid #fff8e91f;border-radius:12px;background:#fff9ee18;color:#624c38;box-shadow:none;transition:background .16s,border-color .16s,box-shadow .16s}
+.atlas-actions svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 2px #fff7eb)}
+.daily-reader.atlas-top .atlas-header .atlas-actions a:active,.daily-reader.atlas-top .atlas-header .atlas-actions a:focus-visible{background:#fff6e8f5;border-color:#d5b98e;box-shadow:0 2px 9px #624c3820}
+@media(hover:hover){.daily-reader.atlas-top .atlas-header .atlas-actions a:hover{background:#fff6e8f5;border-color:#d5b98e;box-shadow:0 2px 9px #624c3820}}
+.atlas-header.is-compact .atlas-actions{top:calc((var(--atlas-compact-height) - 44px)/2)}
+.atlas-compact-copy{position:absolute;left:max(24px,calc((100vw - 1120px)/2));right:142px;top:50%;transform:translateY(-50%);visibility:hidden;opacity:0;color:#574334;transition:opacity .15s ease}
+.atlas-compact-copy strong{display:block;font-size:19px;font-weight:650;line-height:1.4;white-space:nowrap}
+.atlas-compact-copy span{display:block;margin-top:3px;font-size:11px;line-height:1.5;color:#856b51}
+.atlas-header.is-compact .atlas-compact-copy{visibility:visible;opacity:1}
+.atlas-header.is-compact .atlas-stage:after{background:linear-gradient(90deg,#fff7eb 0%,#fff7ebf2 36%,#fff7eb9e 55%,#fff7eb00 80%)}
+.daily-reader.atlas-top .day-toolbar{top:var(--atlas-live-height)}
+body.atlas-top #daily-overview{scroll-margin-top:calc(var(--atlas-compact-height) + var(--atlas-toolbar-height) + 16px)!important}
+body.atlas-top #itinerary{scroll-margin-top:calc(var(--atlas-compact-height) + 8px)}
+body.atlas-top .daily-view,body.atlas-top #hakodate-tickets,body.atlas-top #day-map,body.atlas-top #day-transport{scroll-margin-top:calc(var(--atlas-compact-height) + var(--atlas-toolbar-height) + 16px)}
 .atlas-stage{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
 .atlas-stage:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#fff7eb 0%,#fff7eb 23%,#fff7ebf5 35%,#fff7eb9e 46%,#fff7eb00 65%)}
 .atlas-panorama{display:block;width:100%;height:100%;max-width:none}
@@ -30,9 +50,19 @@
 @keyframes atlas-boat-cross{from{transform:translateX(520px)}to{transform:translateX(1750px)}}
 @keyframes atlas-boat-bob{from{transform:translateY(-1.5px) rotate(-.5deg)}to{transform:translateY(1.5px) rotate(.5deg)}}
 @media(min-width:681px) and (max-width:899px){.daily-reader .travel-mast.atlas-mast{min-height:280px;padding:25px}.atlas-copy{max-width:49%}.daily-reader .atlas-copy .eyebrow{font-size:8px}.daily-reader .atlas-copy h1{font-size:28px}.daily-reader .atlas-copy .atlas-intro{font-size:13px}}
+@media(min-width:681px) and (max-width:899px){:root{--atlas-expanded-height:280px;--atlas-live-height:280px}}
 @media(max-width:680px){
+  :root{--atlas-expanded-height:278px;--atlas-compact-height:88px;--atlas-live-height:278px}
   .daily-reader .travel-mast.atlas-mast{min-height:278px;padding:19px 20px 22px;margin-top:14px;margin-bottom:12px;border-radius:17px;align-items:flex-start}
   .daily-reader.atlas-top .travel-mast.atlas-mast{margin:0;padding:19px 20px 22px;border-radius:0}
+  .daily-reader.atlas-top .atlas-header .atlas-mast{min-height:0;padding:0 20px}
+  .atlas-header .atlas-copy{padding-top:64px}
+  .atlas-header .atlas-stage{top:calc(127px - var(--atlas-progress) * 137px);height:calc(var(--atlas-expanded-height) - 127px)}
+  .atlas-actions{top:12px;right:15px}
+  .daily-reader .atlas-actions a{min-height:44px;padding:8px 10px;font-size:11px}
+  .atlas-compact-copy{left:20px;right:126px}
+  .atlas-compact-copy strong{font-size:16px}
+  .atlas-compact-copy span{font-size:10px}
   .atlas-copy{max-width:100%;padding:0}
   .daily-reader .atlas-copy .eyebrow{font-size:8px;letter-spacing:.14em;margin-bottom:7px}
   .daily-reader .atlas-copy h1{font-size:26px;line-height:1.35;margin-bottom:7px}
@@ -44,5 +74,7 @@
 }
 @media(max-width:350px){.daily-reader .travel-mast.atlas-mast{padding-inline:15px;min-height:270px}.daily-reader .atlas-copy h1{font-size:23px}.daily-reader .atlas-copy .atlas-intro{font-size:10px}}
 @media(max-width:350px){.daily-reader.atlas-top .travel-mast.atlas-mast{padding-inline:15px}}
+@media(max-width:350px){:root{--atlas-expanded-height:270px;--atlas-live-height:270px}.daily-reader.atlas-top .atlas-header .atlas-mast{padding-inline:15px}.daily-reader .atlas-actions a{padding-inline:8px}.atlas-compact-copy{left:15px}.atlas-compact-copy strong{font-size:15px}.atlas-compact-copy span{font-size:9.5px}}
 @media(prefers-reduced-motion:reduce){.atlas-stage *{animation:none!important}}
 @media print{.daily-reader .travel-mast.atlas-mast{min-height:0;padding:0;border:0;box-shadow:none;margin:10px 0}.atlas-stage{display:none}.atlas-copy{max-width:100%}}
+@media print{.atlas-shell{height:0}.atlas-header{display:none!important}.daily-reader.atlas-top .day-toolbar{position:static}}

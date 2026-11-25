@@ -1,4 +1,7 @@
 /* Shared travel reader, 2026-11-24. Existing content and booking states remain in HTML. */
+.daily-swipe-hint{display:none}
+@media(max-width:680px){.daily-swipe-hint{display:block;text-align:center;font-size:11px;color:var(--muted);letter-spacing:.04em;margin:10px 0 0}}
+@media print{.daily-swipe-hint{display:none}}
 :root{--paper:#f7f7f2;--ink:#243c3a;--muted:#65736c;--line:#dce3d9;--green:#dfe9d9;--blue:#dcebf0;--yellow:#f2d99c;--pink:#f1ded3;--border:1px solid var(--line);--header:64px}
 body{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.75;color:var(--ink);background:var(--paper)}
 button,input,select{font:inherit}a{color:inherit}button,a,summary{touch-action:manipulation}a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible{outline:3px solid #bb752b;outline-offset:4px}button{cursor:pointer}h1,h2,h3,h4{letter-spacing:-.025em}.wrap{width:min(1120px,calc(100% - 48px));margin-inline:auto}

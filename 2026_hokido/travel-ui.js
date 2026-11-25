@@ -94,3 +94,54 @@
   updateResourceLinks();
   window.addEventListener('hokkaido-day-change',()=>queueMicrotask(updateResourceLinks));
 })();
+
+/* A deliberate one-finger swipe changes the day through the existing date tabs. */
+(() => {
+  'use strict';
+  const itinerary=document.getElementById('itinerary');
+  const overview=document.getElementById('daily-overview');
+  if(!itinerary||!overview||document.body.classList.contains('resource-library'))return;
+  const mobile=matchMedia('(max-width:680px)');
+  const hint=document.createElement('p');
+  hint.className='daily-swipe-hint';
+  hint.textContent='← 左右滑動切換日期 →';
+  overview.before(hint);
+  let start;
+  function reservedTarget(target){
+    if(!(target instanceof Element)||target.closest('a,button,input,select,textarea,label,summary,iframe,[contenteditable],.day-toolbar,.day-controls'))return true;
+    for(let el=target;el&&el!==itinerary;el=el.parentElement){
+      if(/auto|scroll/.test(getComputedStyle(el).overflowX)&&el.scrollWidth>el.clientWidth+1)return true;
+    }
+    return false;
+  }
+  itinerary.addEventListener('touchstart',event=>{
+    start=undefined;
+    if(!mobile.matches||event.touches.length!==1||reservedTarget(event.target))return;
+    const touch=event.touches[0];
+    // Leave the phone's edge gestures available for browser back/forward.
+    if(touch.clientX<24||touch.clientX>innerWidth-24)return;
+    start={id:touch.identifier,x:touch.clientX,y:touch.clientY,time:event.timeStamp};
+  },{passive:true});
+  itinerary.addEventListener('touchmove',event=>{
+    if(!start)return;
+    if(event.touches.length!==1){start=undefined;return;}
+    const touch=event.touches[0];
+    const dx=Math.abs(touch.clientX-start.x),dy=Math.abs(touch.clientY-start.y);
+    if(touch.identifier!==start.id||(dy>12&&dy>dx*1.15))start=undefined;
+  },{passive:true});
+  itinerary.addEventListener('touchcancel',()=>{start=undefined;},{passive:true});
+  itinerary.addEventListener('touchend',event=>{
+    const gesture=start;start=undefined;
+    if(!gesture||!mobile.matches||event.touches.length||document.getSelection()?.isCollapsed===false)return;
+    const touch=Array.from(event.changedTouches).find(t=>t.identifier===gesture.id);
+    if(!touch)return;
+    const dx=touch.clientX-gesture.x,dy=Math.abs(touch.clientY-gesture.y);
+    if(event.timeStamp-gesture.time>800||Math.abs(dx)<64||dy>40||Math.abs(dx)<dy*1.8)return;
+    const tabs=Array.from(document.querySelectorAll('#date-tabs [role="tab"]'));
+    const index=tabs.findIndex(tab=>tab.getAttribute('aria-selected')==='true');
+    const next=index+(dx<0?1:-1);
+    if(index<0||next<0||next>=tabs.length)return;
+    tabs[next].click();
+    requestAnimationFrame(()=>overview.scrollIntoView({block:'start',behavior:'instant'}));
+  },{passive:true});
+})();
