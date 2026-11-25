@@ -59,3 +59,26 @@ body.winter-warm{isolation:isolate;background:#fff7eb;color:#574334;padding-bott
 .resource-library .travel-mast{align-items:center;gap:20px}.library-return{display:inline-flex;align-items:center;min-height:44px;padding:9px 14px;border:1px solid #c7d6bb;border-radius:12px;background:var(--accent-pine-soft);color:var(--accent-pine-ink);font-size:14px;text-decoration:none}
 .resource-library .resource-hub{padding-top:12px}.resource-library .resource-hub>h2{font-size:25px}.resource-library .library-folder{scroll-margin-top:90px}.resource-library .section[id],.resource-library #jr-pickup-flow,.resource-library #rental-guide,.resource-library #hakodate-tickets{scroll-margin-top:90px}.resource-library main>.wrap>.library-folder{width:100%}.resource-library .footer{padding-top:20px}.daily-reader:not(.resource-library) .travel-mast{justify-content:flex-start}.resource-library .candidate-picker{display:none}
 @media(max-width:680px){.resource-library .travel-mast{align-items:flex-start;flex-direction:column;gap:12px}.resource-library .travel-mast h1{font-size:25px}.library-return{font-size:12px}.resource-library .resource-hub>h2{font-size:21px}.resource-library .section[id],.resource-library #jr-pickup-flow{scroll-margin-top:78px}}
+/* Larger daily scenes and small warm sketches mark the reader's sections. */
+.daily-reader:not(.resource-library) .daily-heading{gap:24px}
+.daily-reader:not(.resource-library) .daily-heading>div{min-width:0}
+.daily-reader:not(.resource-library) .daily-heading .day-art{width:220px;max-width:220px;margin:0;align-self:center}
+.daily-reader:not(.resource-library) .daily-heading .day-art svg{width:100%;height:auto;aspect-ratio:260/240}
+.daily-reader .illustrated-title{display:flex;align-items:center;justify-content:space-between;gap:14px;min-width:0}
+.travel-mini-art{display:block;width:78px;height:58px;flex:none;pointer-events:none}
+.daily-reader .timeline-heading.illustrated-title{padding-block:10px}
+.daily-reader .day-aside .illustrated-title{margin-bottom:5px}
+.daily-reader .day-map-heading .illustrated-title{flex:1}
+.daily-reader .weather-heading .illustrated-title{gap:10px}
+.daily-reader .weather-heading .travel-mini-art{width:66px;height:49px}
+@media(min-width:681px) and (max-width:899px){.daily-reader:not(.resource-library) .daily-heading .day-art{width:180px;max-width:180px}}
+@media(max-width:680px){
+  .daily-reader:not(.resource-library) .daily-heading{gap:12px}
+  .daily-reader:not(.resource-library) .daily-heading .day-art{width:112px;max-width:112px;margin:8px 0 0;align-self:flex-start}
+  .travel-mini-art{width:64px;height:47px}
+  .daily-reader .illustrated-title{gap:10px}
+  .daily-reader .weather-heading .travel-mini-art{width:52px;height:39px}
+  .daily-reader .timeline-heading.illustrated-title{padding-block:8px}
+}
+@media(max-width:350px){.daily-reader:not(.resource-library) .daily-heading .day-art{width:96px;max-width:96px}.travel-mini-art{width:55px;height:41px}}
+@media print{.travel-mini-art{display:none!important}}
