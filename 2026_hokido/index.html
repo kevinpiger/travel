@@ -374,7 +374,7 @@
       applyDailyView();
       rememberDaily();
       requestAnimationFrame(updateCurrentNav);
-      if (options.focus) tabs[index].focus();
+      if (options.focus) tabs[index].focus({preventScroll:true});
       if (options.reveal) {const strip = document.getElementById('date-tabs');strip.scrollTo({left:tabs[index].offsetLeft - strip.offsetLeft - (strip.clientWidth - tabs[index].clientWidth) / 2,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});}
     }
     tabs.forEach((tab, index) => {
@@ -444,7 +444,7 @@
       history.replaceState(null,'',url);
     }
     function setDailyView(view) {dailyView=view;applyDailyView();rememberDaily();}
-    document.querySelectorAll('[data-day-view]').forEach(btn=>btn.addEventListener('click',()=>{setDailyView(btn.dataset.dayView);document.getElementById('daily-overview').scrollIntoView({block:'start',behavior:'instant'});}));
+    document.querySelectorAll('[data-day-view]').forEach(btn=>btn.addEventListener('click',()=>setDailyView(btn.dataset.dayView)));
     function revealLibraryTarget() {
       let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}
       const el=document.getElementById(id);if(!el){if(libraryAnchors.has(id)){const url=new URL('./resources.html',location.href);url.search=location.search;url.hash=id;location.replace(url.href);}return;}
@@ -530,6 +530,6 @@
 
 </script>
 <script src="./atlas-header.js?v=20261125compact" defer></script>
-<script src="./travel-ui.js?v=20261125swipe" defer></script><script src="./travel-navigation.js?v=20261125compact" defer></script><script src="./travel-illustrations.js?v=20261125art" defer></script>
+<script src="./travel-ui.js?v=20261125scroll" defer></script><script src="./travel-navigation.js?v=20261125compact" defer></script><script src="./travel-illustrations.js?v=20261125art" defer></script>
   <script src="./winter-ambience.js?v=20261125accents" defer></script></body>
 </html>

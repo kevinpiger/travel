@@ -142,6 +142,5 @@
     const next=index+(dx<0?1:-1);
     if(index<0||next<0||next>=tabs.length)return;
     tabs[next].click();
-    requestAnimationFrame(()=>overview.scrollIntoView({block:'start',behavior:'instant'}));
   },{passive:true});
 })();
