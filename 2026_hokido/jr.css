@@ -1,0 +1,39 @@
+/* The ticket page has its own compact navigation; daily-reader styles stay unchanged. */
+html.jr-page{scroll-padding-top:0;scroll-behavior:auto}
+.travel-document[data-page=jr]>header{max-width:1040px;padding-top:20px;padding-bottom:16px}
+.travel-document[data-page=jr]>header .eyebrow{margin:0 0 6px}
+.travel-document[data-page=jr]>header .muted{margin:0;font-size:13px}
+.travel-document[data-page=jr] main{max-width:1040px;padding-top:20px}
+.travel-document[data-page=jr] .winter-clearing{display:none}
+.jr-ticket-nav{position:sticky;top:58px;z-index:55;display:flex;justify-content:center;gap:8px;padding:8px 16px;border-bottom:1px solid #e7d8c4;background:#fff7ebf5;backdrop-filter:blur(12px)}
+.jr-ticket-nav a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:8px 14px;border:1px solid #e7d8c4;border-radius:10px;font-size:13px;line-height:1.5;font-weight:600;text-decoration:none;white-space:nowrap;color:#665240;background:#fffdf8}
+.jr-ticket-nav a[aria-current=location]{background:#fbefd1;border-color:#d3a54e;color:#785720}
+.jr-ticket-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:20px}
+.travel-document[data-page=jr] .jr-ticket-grid>.ticket{margin:0;padding:0;min-width:0}
+.travel-document[data-page=jr] .ticket,.travel-document[data-page=jr] main>.card{scroll-margin-top:132px}
+.travel-document[data-page=jr] .ticket-head{padding:20px 22px}
+.travel-document[data-page=jr] .ticket-head h2{color:#fff9ef;margin:8px 0 0;font-size:24px}
+.travel-document[data-page=jr] .ticket-head .muted{color:#f1e6d5;margin:10px 0 0;font-size:14px}
+.travel-document[data-page=jr] .ticket-body{padding:24px 22px}
+.travel-document[data-page=jr] .route{display:grid;grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr);gap:8px;align-items:center}
+.travel-document[data-page=jr] .route>div{min-width:0}
+.travel-document[data-page=jr] .time{font-size:38px;line-height:1.2;white-space:nowrap}
+.travel-document[data-page=jr] .arrow{text-align:center}
+.travel-document[data-page=jr] .station{margin-top:8px}
+.travel-document[data-page=jr] .seat strong{font-size:25px;white-space:nowrap}
+.travel-document[data-page=jr] .note{overflow-wrap:anywhere}
+.travel-document[data-page=jr] .jr-ticket-grid+.card{margin-top:24px}
+@media(max-width:899px){.jr-ticket-grid{grid-template-columns:1fr}}
+@media(max-width:680px){
+  .travel-document[data-page=jr]>header{padding:16px}
+  .travel-document[data-page=jr]>header h1{margin:0 0 8px;font-size:25px}
+  .travel-document[data-page=jr] main{padding:16px 16px 40px}
+  .jr-ticket-nav{gap:5px;padding:7px 12px}
+  .jr-ticket-nav a{flex:1;min-width:0;padding:8px 5px;font-size:12px}
+  .travel-document[data-page=jr] .ticket-head{padding:18px}
+  .travel-document[data-page=jr] .ticket-body{padding:20px 18px}
+  .travel-document[data-page=jr] .time{font-size:34px}
+  .travel-document[data-page=jr] .ticket-head h2{font-size:23px}
+}
+@media(max-width:350px){.travel-document[data-page=jr] .time{font-size:29px}.travel-document[data-page=jr] .seat strong{font-size:23px}.jr-ticket-nav{padding-inline:8px;gap:4px}.jr-ticket-nav a{font-size:11px}}
+@media print{.jr-ticket-nav{display:none}.jr-ticket-grid{display:block}.jr-ticket-grid>.ticket{margin-bottom:20px!important}.travel-document[data-page=jr]>header{padding-top:0}}
