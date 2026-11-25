@@ -1125,6 +1125,6 @@
   window.addEventListener('hokkaido-day-change',()=>queueMicrotask(refresh));
   const help=document.createElement('p');help.className='location-flight-help';
   help.innerHTML=plane+'<span>點小飛機，從目前位置出發；請允許 Google Maps 使用定位。無法定位時可自行輸入出發點。</span>';
-  const target=document.querySelector('.travel-mast')||document.querySelector('main h1');
+  const target=document.querySelector('body.atlas-top > .site-header')||document.querySelector('.travel-mast')||document.querySelector('main h1');
   if(target&&document.querySelector('.location-flight'))target.insertAdjacentElement('afterend',help);
 })();
