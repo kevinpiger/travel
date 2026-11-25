@@ -10,7 +10,7 @@ Artwork: © 2026 SVG Scene Atlas, CC BY 4.0
 https://creativecommons.org/licenses/by/4.0/
 Changes: recolored and rearranged as a Hokkaido-inspired winter travel panorama;
 facades simplified, snow mountains added, code-generated shapes baked into inline
-SVG, motion replaced with gentle CSS animation. Original scene interactions,
+SVG, motion replaced with CSS animation including a moving canal boat. Original scene interactions,
 audio, analytics and site controls are not included. Not a geographical map.
 
 Code copyright and permission notice:
