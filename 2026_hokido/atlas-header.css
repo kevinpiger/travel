@@ -8,7 +8,7 @@
 .daily-reader.atlas-top .atlas-header .atlas-mast{height:100%;min-height:0;padding-block:0}
 .atlas-header .atlas-copy{opacity:clamp(0,calc(1 - var(--atlas-progress) * 2),1);pointer-events:none}
 .atlas-header .atlas-stage{top:calc(var(--atlas-progress) * -25px);bottom:auto;height:var(--atlas-expanded-height)}
-.atlas-actions{position:absolute;right:max(24px,calc((100vw - 1120px)/2));top:16px;z-index:5}
+.atlas-actions{position:absolute;right:max(12px,env(safe-area-inset-right,0px));top:16px;z-index:5}
 .daily-reader.atlas-top .atlas-header .atlas-actions a{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;min-height:44px;padding:0;border:1px solid #fff8e91f;border-radius:12px;background:#fff9ee18;color:#624c38;box-shadow:none;transition:background .16s,border-color .16s,box-shadow .16s}
 .atlas-actions svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 2px #fff7eb)}
 .daily-reader.atlas-top .atlas-header .atlas-actions a:active,.daily-reader.atlas-top .atlas-header .atlas-actions a:focus-visible{background:#fff6e8f5;border-color:#d5b98e;box-shadow:0 2px 9px #624c3820}
@@ -58,7 +58,7 @@ body.atlas-top .daily-view,body.atlas-top #hakodate-tickets,body.atlas-top #day-
   .daily-reader.atlas-top .atlas-header .atlas-mast{min-height:0;padding:0 20px}
   .atlas-header .atlas-copy{padding-top:64px}
   .atlas-header .atlas-stage{top:calc(127px - var(--atlas-progress) * 137px);height:calc(var(--atlas-expanded-height) - 127px)}
-  .atlas-actions{top:12px;right:15px}
+  .atlas-actions{top:12px;right:max(8px,env(safe-area-inset-right,0px))}
   .daily-reader .atlas-actions a{min-height:44px;padding:8px 10px;font-size:11px}
   .atlas-compact-copy{left:20px;right:126px}
   .atlas-compact-copy strong{font-size:16px}
